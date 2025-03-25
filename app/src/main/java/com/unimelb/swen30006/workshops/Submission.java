@@ -1,12 +1,29 @@
 package com.unimelb.swen30006.workshops;
+import java.util.ArrayList;
+import java.util.List;
 
-// Sample private submission class to be replaced by your implementation
-class Submission {
-    // Return two fake files
-    public File[] includedFiles(){
-        File[] files = new File[2];
-        files[0] = new File();
-        files[1] = new File();
+public class Submission {
+    private String submissionName;
+    private List<File> files;
+
+    public Submission(String submissionName) {
+        this.submissionName = submissionName;
+        this.files = new ArrayList<>();
+    }
+
+    public String getSubmissionName() {
+        return submissionName;
+    }
+
+    public void setSubmissionName(String submissionName) {
+        this.submissionName = submissionName;
+    }
+
+    public List<File> getFiles() {
         return files;
+    }
+
+    public void addFile(File file) {
+        this.files.add(file);
     }
 }
